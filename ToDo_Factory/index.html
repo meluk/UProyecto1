@@ -1,0 +1,51 @@
+<!DOTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To Do</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body ng-app="ToDo">
+  <div ng-controller="todoController">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="page-header">
+            <h1>To Do</h1>
+        </div>
+     <section>
+
+           <form name="frm" data-ng-submit="addTodo()" class="form-horizontal">
+         <div class="form-group">
+        <input type="text" data-ng-model="todoText" placeholder="
+What should I do?" class="form-control"/>
+         </div>
+        <button ng-disable="frm.$invalid"  type="submit" value="Add Task" class="btn btn-success btn-lg btn-block">Add</button>
+      </form>
+
+       <div class="panel panel-default">
+         <div class="panel-heading"><span>{{ remaining() }} of {{ todos.length }} remaining</span></div>
+         <div class="panel-body">
+            <ul class="unstyled">
+              <li data-ng-repeat="todo in todos track by $index">
+          <input type="checkbox" data-ng-model="todo.done">
+          <span class="done-{{ todo.done }}">{{ todo.text }}</span>
+        </li>
+      </ul>
+         </div>
+       </div>
+
+
+      <button data-ng-click="archive()" class="btn btn-warning">Remove Completed Items</button>
+
+    </section>
+    </div>
+  </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/factory.js"></script>
+
+</body>
+</html>

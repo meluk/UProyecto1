@@ -1,0 +1,83 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  /* Better text styling */
+  font: bold 25px Arial, sans-serif;
+}
+
+/* A nice BG gradient */
+html {
+  height: 100%;
+  background: radial-gradient(circle, #fff 20%, #ccc);
+  background-size: cover;
+}
+
+
+#calculadora {
+  width: 325px;
+  height: auto;
+  
+  margin: 100px auto;
+  padding: 20px;
+  
+  background: #4c4c4c;
+  border-radius: 3px;
+  box-shadow:0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.top span.clear {
+  float: left;
+}
+
+.top .pantalla {
+  height: 60px;
+  width: 212px;
+  
+  float: right;
+  padding: 10px 15px;
+
+  text-align: right;
+  font-size: 35px;
+
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-calcu, .top {overflow: hidden;}
+
+.btn-calcu span, .top span.borrar {
+  float: left;
+  cursor: pointer;
+  
+  width: 67px;
+  height: 60px;
+  
+  background: #d7d7d7;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  
+  margin: 0 5px 5px 0;
+  padding: 11px 0 0 0;
+  
+  line-height: 36px;
+  text-align: center;
+  
+}
+
+.btn-calcu span.operator {
+  background: #f9914e;
+  margin-right: 0;
+}
+
+.btn-calcu span.igual {
+  background: #ffc528;
+}
+
+.top span.borrar {
+  background: #cf3f6e;
+  color: white;
+}
+

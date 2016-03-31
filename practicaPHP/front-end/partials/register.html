@@ -1,0 +1,36 @@
+<!-- Le permite a un usuario crear una cuenta en el sistema. -->
+<div class="page-header">
+    <h3>Register</h3>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form novalidate autocomplete="off" name="registerForm">
+            <div class="form-group">
+                <p ng-show="registerForm.fullName.$invalid && registerForm.fullName.$touched">Nombre inválido</p>
+                <label for="fullName">Name</label>
+                <input type="text" ng-model="fullName" placeholder="Full Name" id="fullName" name="fullName" class="form-control" required ng-model-options="{updateOn:'blur'}" />
+            </div>
+            <div class="form-group">
+                <p ng-show="registerForm.email.$invalid && registerForm.email.$touched">E-mail inválido</p>
+                <label for="email">Email</label>
+                <input type="email" ng-model="email" placeholder="email" id="email" name="email" class="form-control" required ng-model-options="{updateOn:'blur'}" />
+            </div>
+                <div class="form-group">
+                    <p ng-show="registerForm.pass.$invalid && registerForm.pass.$touched">Contraseña requerida</p>
+                    <label>Contraseña:</label><input type="password" name="pass" ng-model= "pass" ng-minlength="6" required ng-model-options="{ updateOn:'blur'}" placeholder="Minimo 6 caracteres" class="form-control">
+                </div>
+                <div class="form-group">
+                    <p ng-show="registerForm.repeatpass.$invalid && registerForm.repeatpass.$touched">Contraseñas deben coincidir</p>
+                    <label>Repetir contraseña:</label><input type="password" name="repeatpass" ng-model= "repeatpass" ng-minlength="6" required ng-model-options="{ updateOn:'blur'}" class="form-control" compare-to="repeatpass != pass ? 'Passwords don\'t match' : ''">
+                </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" value="Register" ng-click="register()">
+            </div>
+        </form>
+    </div>
+    <div class="panel-footer">
+        Already have an account? <a ng-href="#/login">Login</a>
+    </div>
+</div>
+
+<div style="margin-bottom: 50px">{{fullName}} - {{email}} - {{pass}}</div>

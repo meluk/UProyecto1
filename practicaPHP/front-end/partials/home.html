@@ -1,0 +1,26 @@
+<!-- Contenido restringido a usuarios autorizados. -->
+<div ng-if="user">
+    <div class="page-header">
+        <h3>Welcome {{user.email}}!</h3>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <blockquote class="twitter-tweet" data-conversation="none" data-lang="es">
+                <p lang="in" dir="ltr">chihuahua or muffin ? <a href="https://t.co/LzZ1lwoVrP">pic.twitter.com/LzZ1lwoVrP</a></p>
+                &mdash; karen zack (@teenybiscuit) <a href="https://twitter.com/teenybiscuit/status/707727863571582978">10 de marzo de 2016</a>
+            </blockquote>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="panel-footer text-right">
+            <a ng-href="#/logout">Log out</a>
+        </div>
+    </div>
+</div>
+
+<!-- Mensaje de error para usuarios no autorizados: -->
+<div ng-if="error">
+    <div class="page-header">
+        <h3>Error</h3>
+    </div>
+    <p class="alert alert-danger">Usuario no autorizado</p>
+</div>

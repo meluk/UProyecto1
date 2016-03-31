@@ -1,0 +1,12 @@
+/*validaciones*/
+input.ng-invalid.ng-dirty, select.ng-invalid.ng-dirty{
+	border: 1px solid #fa787e;
+}
+
+input.ng-valid.ng-dirty, select.ng-valid.ng-dirty{
+	border: 1px solid #78fa89;
+}
+
+input.ng-invalid.ng-touched.ng-invalid-required, select.ng-invalid.ng-touched.ng-invalid-required{
+	border: 1px solid #fa787e;
+}

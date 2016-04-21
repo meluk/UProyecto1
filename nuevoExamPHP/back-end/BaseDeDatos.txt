@@ -1,0 +1,38 @@
+Base de Datos
+
+create database examPHP;
+
+GRANT ALL PRIVILEGES ON practica.* TO 'root'@'localhost';
+
+use examPHP;
+
+CREATE TABLE  videGame(
+	id int not null auto_increment PRIMARY KEY,
+    title varchar(50) not null,
+    developer varchar(100) not null,
+    description varchar(100) not null,
+    console varchar(50) not null,
+    releaseDate date not null,
+    rate int not null check(rate between 1 and 5),
+    url  varchar(500) not null
+  );
+  
+  insert into videGame
+(title, developer, description, console, releaseDate, rate, url)
+values
+('Shadow of Mordor','EA', 'Adventure game', 'XBOX One', '2016/01/01', '3', 'http://gamerzone.club/wp-content/uploads/2015/12/Middle-Earth-Shadow-of-Mordor-724x334-1.jpg');
+
+
+insert into videGame
+(title, developer, description, console, releaseDate, rate, url)
+values
+('Destiny','Sony', 'Adventure game', 'PS4', '2016/01/01', '4', 'https://upload.wikimedia.org/wikipedia/en/b/be/Destiny_box_art.png');
+
+insert into videGame
+(title, developer, description, console, releaseDate, rate, url)
+values
+('minecraft','Sony', 'Adventure game', 'XBOX One', '2016/01/01', '4', 'https://lh6.googleusercontent.com/-3XfQIrMuPcU/AAAAAAAAAAI/AAAAAAAAAZ8/lFyWhaRInZg/photo.jpg');
+
+select * from videGame where id = 19;
+
+select * from videGame;

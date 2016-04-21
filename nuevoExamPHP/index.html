@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calcu</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="users" ng-controller="usersController">
+	<div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Usuarios</h3>
+            </div>
+            <div class="panel-body">
+            	
+           
+            <form name="formularioSuma" novalidate>
+                <div class="form-group text-center">
+                    <p><pre>Login</pre></p>
+                    <input type="email" ng-model="log.email" placeholder="email">
+                    <input type="password" ng-model="log.password" placeholder="password">
+                    <input type="button" ng-click="login()" class="btn btn-primary" value="Login">
+                </div>
+
+                <div class="form-group text-center">
+                	<p><pre>Logout</pre></p>
+                    <input type="button" class="btn btn-danger" value="logout" ng-click="logout()">
+                </div>
+                <div class="form-group text-center">
+                	<p><pre>Register</pre></p>
+                    <input type="text" placeholder="Nombre" ng-model="reg.name">
+                    <input type="text" placeholder="Apellido" ng-model="reg.lastname">
+                    <input type="email" placeholder="E-mail" ng-model="reg.email">
+                    <input type="password" placeholder="Contraseña" ng-model="reg.password">
+                    <input type="button" class="btn btn-warning" value="Registrar" ng-click="register()">
+                </div>
+                
+            </form>
+             </div>
+        </div>
+	</div>
+	
+
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

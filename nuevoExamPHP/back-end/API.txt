@@ -1,0 +1,66 @@
+API
+
+Primero debe cambiar los valores en StorageService.php
+
+ $config = [   //aqui se cambian los datos de la base datos
+            'db_host' => '127.0.0.1',
+            'db_name' => 'examPHP',
+            'db_user' => 'root',
+            'db_pass' => 'root'
+        ];
+
+Rutas:
+
+1. create
+Nos permite crear un nuevo juego con lo parametros que le eviamos.
+	URL: http://localhost:port/folder/back-end/game/create
+	Metodo: POST
+
+	$parametros = [
+	    ":title" => $title,
+	    ":developer" => $developer,
+	    ":description" => $description,
+	    ":console" => $console,
+	    ":releaseDate" => $releaseDate,
+	    ":rate" => $rate,
+	    ":url" => $url,
+	];
+
+2. list
+Enlista todos los juegos que se encuentran en la base de datos
+    URL: http://localhost:port/folder/back-end/game/list
+	Metodo: GET
+	$parametros = none
+
+3. delete
+Nos permite borrar un específico juego, atravez de su id
+    URL: http://localhost:port/folder/back-end/game/edit/{id}
+	Metodo: GET
+    $parametros = none
+
+4.edit
+Nos permite editar cualquier informacion de un juego
+    URL: http://localhost:port/folder/back-end/game/edit/{id}
+	Metodo: POST
+
+	$parametros = [
+	    ":id" => $id,
+	    ":title" => $title,
+	    ":developer" => $developer,
+	    ":description" => $description,
+	    ":console" => $console,
+	    ":releaseDate" => $releaseDate,
+	    ":rate" => $rate,
+	    ":url" => $url,
+	];	
+
+5.getByID
+ Nos devuelve toda la informacio de un juegos específico, atravez de su id
+    URL: http://localhost:port/folder/back-end/game/gameId
+	Metodo: POST
+
+	$parametros = [
+	    ":id" => $id,
+	];
+
+

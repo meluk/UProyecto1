@@ -1,0 +1,15 @@
+.btn-padding{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+input{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
